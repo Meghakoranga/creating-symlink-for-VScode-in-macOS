@@ -1,7 +1,26 @@
-```markdown
+
+# Adding Symlink for VS Code
+A symlink, or symbolic link, is a type of file in Unix-like operating systems that acts as a reference or shortcut to another file or directory
+
+To directly create a symlink for VS Code, follow these steps:
+
+1. **Open Terminal**.
+
+2. **Create a Symlink**:  
+Run the following command to create a symlink in `/usr/local/bin`, which allows you to use the `code` command from anywhere in the terminal:
+```
+sudo ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" /usr/local/bin/code
+```
+This command requires administrative privileges, so you'll need to enter your password.
+
+**Verify the Symlink:**
+After creating the symlink, you can verify it by running:
+```
+ls -l /usr/local/bin/code
+```
 # VS Code Terminal Setup Troubleshooting
 
-This document outlines the issues encountered while trying to use the `code .` command in the terminal to open Visual Studio Code (VS Code) and the solutions that were implemented.
+The issues that I encountered while trying to use the `code .` command in the terminal to open Visual Studio Code (VS Code) and the solutions that were implemented.
 
 ## Issues Faced
 
@@ -61,6 +80,6 @@ To address the "file not found" error:
 
 ## Conclusion
 
-After following the above steps, the `code .` command successfully opened Visual Studio Code from the terminal. This guide serves as a reference for troubleshooting similar issues in the future.
-```
+After following the above steps, the `code .` command successfully opened Visual Studio Code from the terminal. 
+
 
